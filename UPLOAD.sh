@@ -36,6 +36,7 @@ InputVersion() {
 
 # 审查输入内容
 CheckInfomation() {
+    InputRepositoryPath
     InputVersion
 
     echo -e "\n================================================"
