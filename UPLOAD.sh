@@ -47,8 +47,8 @@ git remote add origin ${remote_url_path}
 
 git add .
 git commit -m "up time : $(date +%y%m%d_%H%M)"
-git push origin master -f 
-# git push -u origin master
+# git push origin master -f 
+git push -u origin master
 # git push
 
 # git tag $version
