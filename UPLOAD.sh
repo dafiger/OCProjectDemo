@@ -33,20 +33,20 @@ getInfomation() {
 
 echo -e "\n"
 
-while [ "$confirmed" != "y" -a "$confirmed" != "Y" ] 
-do
-    if [ "$confirmed" == "n" -o "$confirmed" == "N" ]
-    then 
-        getInfomation
-    fi
-    read -p "确定? (y/n):" confirmed
-done
+# while [ "$confirmed" != "y" -a "$confirmed" != "Y" ] 
+# do
+#     if [ "$confirmed" == "n" -o "$confirmed" == "N" ]
+#     then 
+#         getInfomation
+#     fi
+#     read -p "确定? (y/n):" confirmed
+# done
 
 git init
 git remote add origin ${remote_url_path}
 
 git add .
-git commit -m "up time : $(date +%y%m%d_%H%M)"
+git commit -m "up time : $(date +%Y%m%d_%H%M)"
 # git push origin master -f 
 git push -u origin master
 # git push
