@@ -4,7 +4,7 @@ platform :ios, '10.0'
 #inhibit_all_warnings!
 #use_frameworks!
 
-target 'DFBaseTool' do
+target 'OCProjectDemo' do
   
   # 常用库
   pod 'Masonry', '~> 1.1.0'
