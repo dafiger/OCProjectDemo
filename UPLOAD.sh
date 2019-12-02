@@ -10,48 +10,50 @@ GreenColor='\033[32m'
 YellowColor='\033[33m'
 DefaultColor='\033[0m'
 
-# 变量
-remote_url_path=""
-confirmed="n"
+# 远程仓库地址
+RemoteUrlPath=''
+# 确认状态
+ConfirmStatus='N'
 
-getRemoteUrlPath() {
-    read -p "请输入远程地址: " remote_url_path
+InputRemoteUrlPath() {
+    read -p "请输入远程仓库地址: " RemoteUrlPath
     # 字符串长度为0
-    if test -z "$remote_url_path"
+    if test -z "$RemoteUrlPath"
     then
-        getRemoteUrlPath
+        InputRemoteUrlPath
     fi
 }
 
-getInfomation() {
-    getRemoteUrlPath
+# 检验输入内容
+CheckInfomation() {
+    InputRemoteUrlPath
 
     echo -e "\n${DefaultColor}================================================"
-    echo -e " Remote url : ${RedColor}${remote_url_path}${DefaultColor}"
+    echo -e "  远程仓库地址：${RedColor}${RemoteUrlPath}${DefaultColor}"
     echo -e "================================================\n"
 }
 
-echo -e "\n"
-
-# while [ "$confirmed" != "y" -a "$confirmed" != "Y" ] 
-# do
-#     if [ "$confirmed" == "n" -o "$confirmed" == "N" ]
-#     then 
-#         getInfomation
-#     fi
-#     read -p "确定? (y/n):" confirmed
-# done
+# 循环检验
+while [ ${ConfirmStatus} != "y" -a ${ConfirmStatus} != "Y" ] 
+do
+    if [ ${ConfirmStatus} == "n" -o ${ConfirmStatus} == "N" ]
+    then 
+        CheckInfomation
+    fi
+    read -p "确定? (y/n):" ConfirmStatus
+done
 
 git init
-git remote add origin ${remote_url_path}
+git remote add origin ${RemoteUrlPath}
 
 git add .
-git commit -m "up time : $(date +%Y%m%d_%H%M)"
+git commit -m "提交记录时间 : $(date +%Y%m%d_%H%M%S)"
+
 # git push origin master -f 
 git push -u origin master
 # git push
 
-# git tag $version
+# git tag xxx
 # git push --tags
 
 exit 0
