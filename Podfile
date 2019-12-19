@@ -37,7 +37,7 @@ target 'OCProjectDemo' do
   # pod 'Reachability', '~> 3.2'
   # pod 'YTKNetwork', '~> 2.0.4'
   # pod 'SVProgressHUD', '~> 2.2.5'
-  # pod 'MJRefresh', '~> 3.1.15.7'
+  pod 'MJRefresh', '~> 3.2.3'
   # pod 'CocoaAsyncSocket', '~> 7.6.3'
   # 空视图占位
   # pod 'DZNEmptyDataSet', '~> 1.8.1'
