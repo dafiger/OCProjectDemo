@@ -10,7 +10,7 @@ target 'OCProjectDemo' do
   pod 'Masonry', '~> 1.1.0'
   # pod 'AFNetworking', '~> 3.2.1'
   # pod 'YYModel', '~> 1.0.4'
-  # pod 'SDWebImage', '~> 5.1.0'
+  # pod 'SDWebImage', '~> 5.4.0'
   # pod 'MBProgressHUD', '~> 1.1.0'
 
   # RAS(纯Swift)
@@ -37,7 +37,7 @@ target 'OCProjectDemo' do
   # pod 'Reachability', '~> 3.2'
   # pod 'YTKNetwork', '~> 2.0.4'
   # pod 'SVProgressHUD', '~> 2.2.5'
-  pod 'MJRefresh', '~> 3.2.3'
+  pod 'MJRefresh', '~> 3.3.1'
   # pod 'CocoaAsyncSocket', '~> 7.6.3'
   # 空视图占位
   # pod 'DZNEmptyDataSet', '~> 1.8.1'
